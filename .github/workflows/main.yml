@@ -1,0 +1,7 @@
+deploy:
+  runs-on: ubuntu-latest
+  steps:
+  - name: deploy
+    run: |
+        URL="${{ secrets.WEBHOOK_URL }}"
+        curl -X POST -d {} "$URL" -H "Content-Type: application/json"
